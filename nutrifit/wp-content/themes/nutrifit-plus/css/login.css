@@ -1,0 +1,37 @@
+.login h1 a {
+    background-image: url(https://stoic-khorana.5-135-116-99.plesk.page/wp-content/themes/nutrifit-plus/img/logosin.png) !important;
+    background-size: 230px !important;
+    color: #68BA35 !important;
+    height: 57px !important;
+    width: 230px !important;
+}
+
+body{
+background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1900' height='800' preserveAspectRatio='none' viewBox='0 0 1900 800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1078%26quot%3b)' fill='none'%3e%3crect width='1900' height='800' x='0' y='0' fill='url(%23SvgjsRadialGradient1079)'%3e%3c/rect%3e%3cpath d='M950 1322.26C1206.65 1323.59 1464.11 1275.97 1659.34 1109.34 1870.34 929.25 2043.65 677.12 2030.66 400 2018.01 130.47 1790.01-58.49 1595.89-245.89 1406.87-428.36 1212.33-628.34 950-643.19 676.41-658.67 422.78-514.78 226.62-323.38 27.8-129.37-123.35 122.24-119.17 400-115.05 674.46 40.1 922.75 247.97 1102.03 441.05 1268.55 695.03 1320.92 950 1322.26' fill='rgba(104%2c 186%2c 53%2c 1)'%3e%3c/path%3e%3cpath d='M950 1131.45C1153.55 1132.5 1357.74 1094.74 1512.58 962.58 1679.93 819.75 1817.38 619.79 1807.07 400 1797.04 186.24 1616.22 36.37 1462.26-112.26 1312.34-256.97 1158.06-415.58 950-427.36 733.02-439.64 531.86-325.51 376.29-173.71 218.6-19.84 98.72 179.71 102.04 400 105.3 617.67 228.35 814.6 393.22 956.78 546.35 1088.85 747.78 1130.39 950 1131.45' fill='rgba(189%2c 232%2c 155%2c 1)'%3e%3c/path%3e%3cpath d='M950 940.63C1100.45 941.42 1251.38 913.5 1365.82 815.82 1489.51 710.25 1591.1 562.45 1583.49 400 1576.08 242 1442.42 131.23 1328.62 21.38 1217.82-85.59 1103.78-202.82 950-211.52 789.62-220.6 640.94-136.25 525.95-24.05 409.4 89.68 320.8 237.17 323.24 400 325.66 560.89 416.61 706.44 538.46 811.54 651.65 909.15 800.54 939.85 950 940.63' fill='rgba(239%2c 254%2c 227%2c 1)'%3e%3c/path%3e%3cpath d='M950 749.82C1047.35 750.33 1145.01 732.27 1219.06 669.06 1299.1 600.75 1364.83 505.12 1359.9 400 1355.11 297.77 1268.63 226.09 1194.99 155.01 1123.29 85.8 1049.51 9.94 950 4.31 846.23-1.57 750.02 53.02 675.62 125.62 600.2 199.21 542.87 294.64 544.45 400 546.01 504.1 604.86 598.29 683.71 666.29 756.95 729.45 853.29 749.32 950 749.82' fill='rgba(239%2c 254%2c 227%2c 1)'%3e%3c/path%3e%3cpath d='M950 559.01C994.25 559.24 1038.64 551.03 1072.3 522.3 1108.68 491.25 1138.56 447.78 1136.32 400 1134.14 353.53 1094.83 320.95 1061.36 288.64 1028.77 257.18 995.23 222.7 950 220.14 902.83 217.47 859.1 242.28 825.28 275.28 791 308.73 764.94 352.11 765.66 400 766.37 447.32 793.12 490.13 828.96 521.04 862.25 549.75 906.04 558.78 950 559.01' fill='rgba(239%2c 254%2c 227%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1078'%3e%3crect width='1900' height='800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='50%25' cy='50%25' r='1030.78' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1079'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0.15'%3e%3c/stop%3e%3cstop stop-color='rgba(104%2c 186%2c 53%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e") !important;		
+background-position: center center !important;
+background-repeat:  no-repeat !important;
+background-attachment: fixed !important;
+background-size:  cover !important;   
+}
+
+.login form{
+    border: 1px solid #68BA35 !important;
+    border-radius: 40px;
+}
+
+.login .message, .login .success{
+    border-left: 4px solid #68BA35 !important;
+}
+
+#language-switcher{
+    border: 0px !important;
+}
+
+.wp-core-ui .button, .wp-core-ui .button-secondary {
+    color: #68BA35 !important;
+    border-color: #68BA35 !important;
+}
+
+.wp-core-ui .button-primary {
+    background: transparent !important;
+}

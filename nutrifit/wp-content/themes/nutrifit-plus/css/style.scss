@@ -1,0 +1,635 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Ubuntu:wght@300&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+--header-height: 3rem;
+
+//Colores
+--first-color: #68BA35;
+--first-color-alt: #68BA35;
+--title-color: #405235;
+--text-color: black;
+--body-color: #EFFEE3;
+--container-color: #FFF; //Color Navbar
+--primary: #eeeeee;
+--secondary: #599d2e;
+--green: #82cd47;
+--secondary-light: #effee370;
+--secondary-light-2: #effee383;
+--white: #fff;
+--black: #393e46;
+--shadow: 0px 2px 8px 0px var(--secondary-light);
+
+//Fuentes y tipografias
+--body-font: 'Quicksand', sans-serif;
+--parrafo: 'Ubuntu', sans-serif;
+--h1-font-size: 1.5rem;
+--normal-font-size: .938rem;
+--tiny-font-size: .625rem;
+
+//Z index
+--z-tooltip: 10;
+--z-fixed: 100;
+}
+
+  @media screen and (min-width: 968px) {
+    :root {
+      --h1-font-size: 2.25rem;
+      --normal-font-size: 1rem;
+    }
+  }
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1{
+  font-family: var(--body-font);
+  text-align: center;
+  font-size: var(--h1-font-size);
+}
+
+p{
+  font-family: var(--parrafo);
+}
+
+/*=============== LAYOUT ===============*/
+.containerX {
+  max-width: 1350px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--container-color);
+  z-index: var(--z-fixed);
+  transition: .4s;
+}
+
+/*=============== NAVBAR ===============*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__img {
+  width: 153px;
+  border-radius: 50%;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: 600;
+  width: 27vh;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--container-color);
+    box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem;
+    display: grid;
+    align-content: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+    transition: .4s;
+  }
+}
+
+.nav__list, 
+.nav__link {
+  display: flex;
+}
+
+.nav__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+.nav__list {
+  justify-content: space-around;
+}
+
+.nav__name {
+  font-size: var(--tiny-font-size);
+}
+
+.nav__icon {
+  font-size: 1.5rem;
+}
+
+.active-link {
+  position: relative;
+  color: var(--first-color);
+  transition: .3s;
+}
+
+.scroll-header {
+  box-shadow: 0 1px 12px hsla(var(--hue), var(--sat), 15%, 0.15); //Cambiar color del header
+}
+
+//Clases navbar
+.section {
+  padding: 1rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section__height {
+  height: 100vh;
+}
+
+#contenedor{
+  background-color: white;
+  padding: 5vh;
+}
+
+
+//Media Queries Navbar
+@media screen and (min-width: 320px) { //Dispositivos pequeños
+
+  .nav__logo {
+    width: 20vh;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav__name {
+    display: none;
+  }
+  .nav__logo {
+    width: 20vh;
+    margin-top: 5px;
+    margin-left: 8px;
+  }
+}
+
+
+@media screen and (min-width: 576px) { //Dispositivos medianos
+  .nav__list {
+    justify-content: center;
+    column-gap: 3rem;
+  }
+
+  .nav__logo {
+    width: 20vh;
+    margin-top: 5px;
+    margin-left: 8px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding: 6rem 0 2rem;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__img {
+    display: block;
+  }
+  .nav__icon {
+    display: none;
+  }
+  .nav__name {
+    font-size: var(--normal-font-size);
+  }
+  .nav__link:hover {
+    color: var(--first-color);
+    transition: all 0.5s ease;
+  }
+  .active-link::before{
+      bottom: -.75rem;
+  } 
+}
+
+@media screen and (min-width: 1024px) {//Dispositivos grandes
+  .containerX {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/*=============== MENÚ PLATO ===============*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 15px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.column h4{
+  margin-top: 20px;
+}
+
+.column p{
+  margin-top: 10px;
+}
+
+@media (max-width: 950px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+//Subrayado plato
+.subrayado {
+  width: calc(100%);
+  background-image: linear-gradient(transparent calc(100% - 4px), var(--first-color) 1px);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 1s;
+  border-radius: 3px;
+}
+
+.link:hover .subrayado {
+  background-size: 100% 100%;
+}
+
+//Animación imagen plato
+.column div{
+    overflow: hidden;
+    width: 100%;
+}
+
+.column img{
+  width: 100%;
+  transition: 0.5s;
+  object-fit: cover;
+}
+
+.column img:hover{
+  transform: scale(1.2);
+}
+
+//Paginación 
+
+.pagination ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 1vh;
+}
+
+.pagination a{
+  display: inline-block;
+  padding: 10px 18px;
+  color: black;
+}
+
+.p1 a{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  text-align: center;
+}
+
+.p1 a.is-active{
+  background-color: var(--first-color);
+  border-radius: 100%;
+  color: #fff;
+}
+
+
+/*=============== PLATO ===============*/
+.rowplato {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+.columnplato {
+  flex: 50%;
+  max-width: 50%;
+  padding: 15px 15px;
+}
+
+.columnplato img {
+  margin-top: 8px;
+  vertical-align: middle;
+  border-radius: 5%;
+}
+
+.columnplato h2{
+  margin-top: 20px;
+  text-align: left;
+  font-size: 8vh;
+}
+
+.columnplato h3{
+  font-family: var(--body-font);
+  margin-left: 1vh;
+}
+
+.columnplato p{
+  margin-top: 10px;
+}
+
+@media (max-width: 950px) {
+  .columnplato {
+    flex: 80%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .columnplato {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+div.valornutricionallist{
+  padding-top: 2vh;
+  display: flex;
+  overflow-x: auto;
+  ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+li.valor{
+  margin-left: 0;
+  margin-right: 1vh;
+  div{
+    border: 2px solid var(--first-color);
+    border-radius: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+
+    div{
+      align-items: center;
+      background-color: var(--body-color);
+      height: 90px;
+      width: 100px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+
+      span{
+        font-size: 20px;
+      }
+    }
+    
+    p{
+      padding-top: 10px;
+    }
+  }
+}
+
+/*=============== PACIENTES ===============*/
+div.pacientes button{
+    background-color: white;
+    border-radius: 10px;
+    color: var(--first-color);
+    border: 2px solid var(--first-color);
+    padding: 7px;
+    font-size: 18px;
+
+    i{
+      font-size: 20px;
+    }
+}
+div.pacientes img{
+  border-radius: 100%;
+}
+
+div.pacientes h5{
+  margin-top: 20px;
+}
+
+.inputstyle{
+  color: #FFF;
+  background-color: var(--first-color);
+  border: 1px solid var(--first-color);
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.btn-outline-secondary:hover{
+  background-color: var(--first-color) !important;
+  border: 2px solid var(--first-color) !important;
+}
+
+
+  
+/*=============== MENÚ SEMANAL ===============*/
+.menusemanal{
+  img{
+    border-radius: 100px;
+    width: 13vh; 
+  }
+}
+
+.row button{
+  margin-right: 5vh;
+}
+
+#contenedor h3{
+  text-align: center;
+}
+
+.pacienteinfo{
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+
+  img{
+    border-radius: 100%;
+    width: 13vh;
+    text-align: left;
+  }
+
+  h4{
+    margin-left: 40px;
+    font-size: 2vh;
+    text-align: right;
+  }
+}
+
+/*=============== MENÚ PERFIL ===============*/
+
+.menuperfil {
+  position: relative;
+  width: fit-content;
+}
+
+.menuperfil-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 150px;
+  border-radius: 50px;
+  color: var(--black);
+
+  cursor: pointer;
+  border: 1px solid var(--secondary);
+  transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in,
+    border 0.3s;
+}
+
+.menuperfil-btn:hover {
+  background-color: var(--secondary-light-2);
+  box-shadow: var(--shadow);
+}
+
+.menuperfil-img {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.menuperfil-img i {
+  position: absolute;
+  right: 0;
+  bottom: 0.3rem;
+  font-size: 0.5rem;
+  color: var(--green);
+}
+
+.menuperfil-btn span {
+  margin: 0 0.5rem;
+  margin-right: 0;
+}
+
+.menuperfil-list {
+  position: absolute;
+  top: 68px;
+  width: 220px;
+  right: 0;
+  background-color: var(--white);
+  border-radius: 10px;
+  max-height: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: max-height 0.5s;
+  padding-left: 0rem !important;
+}
+
+.menuperfil-list hr {
+  border: 0.5px solid var(--green);
+}
+
+.menuperfil-list.active {
+  max-height: 500px;
+}
+
+.menuperfil-list-item {
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  transition: background-color 0.2s ease-in, padding-left 0.2s;
+}
+
+.menuperfil-list-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.menuperfil-list-item a i {
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: var(--secondary);
+  color: var(--white);
+  line-height: 2.3rem;
+  text-align: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: margin-right 0.3s;
+}
+
+.menuperfil-list-item:hover {
+  padding-left: 1.5rem;
+  background-color: var(--secondary-light);
+}

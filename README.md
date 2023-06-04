@@ -1,2 +1,2 @@
 # Nutrifit+
-Para desplegar este proyecto en local
+Como desplegar este proyecto en local utilizando XAMPP
